@@ -1,3 +1,31 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@media (min-width: 1024px) {
+  #con-box {
+    border-top-right-radius: 200px;
+  }
+
+  #con-img-right {
+    height: 560px;
+  }
+
+  #con-img-right img {
+    left: 790px;
+  }
+
+  #con-pic {
+    top: -2px;
+  }
+
+  #product-items {
+    width: 1024px;
+  }
+}
+
+@media (max-width: 1023px) {
+  #con-box {
+    border-top-right-radius: 100px;
+  }
+}

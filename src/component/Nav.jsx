@@ -9,7 +9,7 @@ function Nav() {
 
   return (
     <header id="Nav">
-      <nav className="flex justify-between bg-white border-gray-200 px-4 lg:px-6 py-2.5 dark:bg-gray-800">
+      <nav className="flex justify-between bg-white border-gray-200 px-4 lg:px-6 py-2.5 dark:bg-gray-800 lg:mx-20 2xl:mx-52">
         <a href="#" className="flex items-center">
           <img src="vite.svg" className="mr-3 h-6 sm:h-9" alt="logo" />
           <span className="self-center txt-xl font-semibold whitespac-nowrap dark:text-white">
