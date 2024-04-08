@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 function Nav() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -10,15 +11,15 @@ function Nav() {
   return (
     <header id="Nav">
       <nav className="flex justify-between bg-white border-gray-200 px-4 lg:px-6 py-2.5 dark:bg-gray-800 lg:mx-20 2xl:mx-52">
-        <a href="#" className="flex items-center">
-          <img src="vite.svg" className="mr-3 h-6 sm:h-9" alt="logo" />
+        <Link to="/" className="flex items-center">
+          <img src="logoTWC1.png" className="mr-3 h-6 sm:h-9" alt="logo" />
           <span className="self-center txt-xl font-semibold whitespac-nowrap dark:text-white">
             Teerakhawat Can
           </span>
-        </a>
+        </Link>
         <div className="flex items-center lg:order-2">
           <a
-            href="#"
+            href="tel:0614979998"
             class="text-white bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 dark:bg-primary-600 dark:hover:bg-primary-700 focus:outline-none dark:focus:ring-primary-800"
           >
             061 497 9998
@@ -68,79 +69,81 @@ function Nav() {
         >
           <ul className="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
             <li>
-              <a
-                href="#"
+              <Link
+                to="/"
                 class="block py-2 pr-4 pl-3 text-white rounded bg-primary-700 lg:bg-transparent lg:text-primary-700 lg:p-0 dark:text-white"
                 aria-current="page"
               >
                 Home
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="#"
+              <Link
+                to="/about"
                 class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
               >
                 About
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="#"
+              <Link
+                to="/product"
                 class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
               >
                 Products
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="#"
+              <Link
+                to="/contact"
                 class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
               >
                 Contact
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
       </nav>
       <hr />
-        {isMenuOpen ? (
-            <ul className="flex-col w-full h-full font-medium lg:hidden bg-white">
-              <li className="p-2">
-                <a
-                  href="#"
-                  class="block py-2 pr-4 pl-3 text-white rounded bg-primary-700 dark:text-white"
-                  aria-current="page"
-                >
-                  Home
-                </a>
-              </li>
-              <li className="p-2">
-                <a
-                  href="#"
-                  class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white dark:border-gray-700"
-                >
-                  About
-                </a>
-              </li>
-              <li className="p-2">
-                <a
-                  href="#"
-                  class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white dark:border-gray-700"
-                >
-                  Products
-                </a>
-              </li>
-              <li className="p-2">
-                <a
-                  href="#"
-                  class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white dark:border-gray-700"
-                >
-                  Contact
-                </a>
-              </li>
-            </ul>
-        ) : null}
+      {isMenuOpen ? (
+        <div className="w-full">
+          <ul className="flex-col h-full font-medium lg:hidden bg-white">
+            <li className="p-2">
+              <Link
+                to="/"
+                class="block py-2 pr-4 pl-3 text-white rounded bg-primary-700 dark:text-white"
+                aria-current="page"
+              >
+                Home
+              </Link>
+            </li>
+            <li className="p-2">
+              <Link
+                to="/about"
+                class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white dark:border-gray-700"
+              >
+                About
+              </Link>
+            </li>
+            <li className="p-2">
+              <Link
+                to="/product"
+                class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white dark:border-gray-700"
+              >
+                Products
+              </Link>
+            </li>
+            <li className="p-2">
+              <Link
+                to="/contact"
+                class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white dark:border-gray-700"
+              >
+                Contact
+              </Link>
+            </li>
+          </ul>
+        </div>
+      ) : null}
     </header>
   );
 }

@@ -1,0 +1,49 @@
+import React from "react";
+
+function About() {
+  return (
+    <section id="aboutpage">
+      <div className="text-center my-4 md:my-8 md:text-xl lg:text-2xl">
+        <span className="">ABOUT US</span>
+        <br />
+        <span>Teerakhawat Can Company Limited</span>
+      </div>
+      <div className="bg-[url('./background.svg')] bg-cover">
+        <div className="flex justify-between">
+          <div></div>
+          <div>
+            <div className="">
+              <img
+                src="./location.jpg"
+                alt="location"
+                className="border-4 border-white w-40 h-40 rounded-full md:w-52 md:h-52 lg:w-72 lg:h-72"
+              />
+            </div>
+          </div>
+          <div></div>
+        </div>
+        <div className="w-59 h-fit mx-4 md:mx-16 lg:mx-36 rounded-2xl content-center" id="bgbur">
+            <div className="text-center text-white pt-24 md:pt-32 lg:pt-44 md:text-2xl lg:text-3xl text-xl">
+                <span><b>ABOUT US</b></span>
+            </div>
+            <div className="mx-8 mt-4 md:mt-8 lg:mt-10 text-white md:text-xl lg:text-2xl md:mx-10 lg:mx-36">
+                <span>
+                    &emsp; บริษัท ธีรฆวัฒน์ แคน จำกัด ก่อตั้งปี 2564 ที่ตั้งสำนักงาน 62/55 หมู่ที่ 2 ตำบลนาดี อำเภอเมืองสมุทรสาคร จังหวัดสมุทรสาคร บริษัทฯ ประกอบกิจการผลิต จำหน่าย และรับจ้างผลิตภัณฑ์บรรจุ เช่น ปี๊บ แกลลอน
+                </span>
+            </div>
+            <div className="mx-8 mt-4 text-white md:text-xl lg:text-2xl md:mx-10 lg:mx-36">
+                <p className="">
+                    วิสัยทัศน์
+                </p>
+                <p className="">
+                    &emsp;เป็นบริษัทที่สร้างความมั่นใจ ทั้งคุณภาพ และผลิตภัณฑ์ที่ดีให้กับลูกค้า
+                </p>
+            </div>
+            <div className="h-8 md:h-10 lg:h-16"></div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+export default About;

@@ -25,3 +25,13 @@
     border-top-right-radius: 100px;
   }
 }
+
+@media (max-width: 430px) {
+  #con-box {
+    border-top-right-radius: 100px;
+  }
+}
+
+#forminput {
+  
+}

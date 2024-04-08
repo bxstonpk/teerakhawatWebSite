@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Content() {
   return (
@@ -38,9 +39,9 @@ function Content() {
               </a>
             </div>
             <div className="w-32 h-10 md:w-48 md:h-12 lg:w-52 lg:h-16 text-center content-center ">
-              <a href="#">
+              <Link to="/product">
                 <span className="md:text-xl lg:text-2xl">See More</span>
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -95,9 +96,9 @@ function Content() {
               <div></div>
               <div></div>
               <div className="border-2 w-24 h-8 md:w-36 md:h-12 lg:w-52 lg:h-14 bg-primary-1000 text-center content-center rounded-2xl">
-                <a href="#">
+                <Link to="/about">
                   <p>อ่านเพิ่มเติม</p>
-                </a>
+                </Link>
               </div>
             </div>
             <div className="h-1 md:h-4 lg:h-8 xl:h-10"></div>
