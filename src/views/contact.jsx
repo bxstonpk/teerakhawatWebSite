@@ -81,6 +81,46 @@ function Contact() {
           <div></div>
         </div>
       </div>
+      <div className="flex justify-between my-4 md:my-6 lg:my-10">
+        <div></div>
+        <div className="mt-4 md:mt-0 md:text-2xl lg:text-3xl">
+          <div className=" text-center pb-4">
+            <span>ติดต่อเรา</span>
+          </div>
+          <div className="pb-1">
+            <a
+              href="tel:034410659"
+              className="flex mr-3 h-6 my-3 md:h-7 lg:h-8"
+            >
+              <img src="customer-service.png" alt="contactSer" className="" />
+              <p className="px-3">034 410 659-660</p>
+            </a>
+          </div>
+          <div className="pb-1">
+            <a
+              href="tel:0614979998"
+              className="flex mr-3 h-6 my-3 md:h-7 lg:h-8"
+            >
+              <img src="./phone-call.png" alt="phone" className="" />
+              <span className="px-3">061 497 9998 (ฝ่ายขาย)</span>
+            </a>
+          </div>
+          <div className="flex mr-3 h-6 my-3 md:h-7 lg:h-8">
+            <img src="./printer.png" alt="fax" className="" />
+            <span className="px-3">034 410 659</span>
+          </div>
+          <div className="pt-1">
+            <a
+              href="mailto: teerakhawat.can@gmail.com"
+              className="flex mr-3 h-6 my-3 md:h-7 lg:h-8"
+            >
+              <img src="./mail.png" alt="email" className="" />
+              <span className="px-3">teerakhawat.can@gmail.com</span>
+            </a>
+          </div>
+        </div>
+        <div></div>
+      </div>
     </section>
   );
 }

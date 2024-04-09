@@ -17,6 +17,12 @@
 
   #con-pic {
     top: -2px;
+    z-index: -1;
+  }
+
+  #bgbur {
+    top: -130px;
+    z-index: -1;
   }
 }
 
@@ -24,14 +30,79 @@
   #con-box {
     border-top-right-radius: 100px;
   }
+
+  #bgbur {
+    top: -100px;
+    z-index: -1;
+  }
+
+  #con-pic {
+    z-index: -1;
+  }
 }
 
 @media (max-width: 430px) {
   #con-box {
     border-top-right-radius: 100px;
   }
+
+  #bgbur {
+    top: -80px;
+    z-index: -1;
+  }
+
+  #con-pic {
+    z-index: -1;
+  }
 }
 
-#forminput {
-  
+#bgbur {
+  background-color: rgba(17, 74, 160, 0.950);
+  position: relative;
+}
+
+#con-img-right {
+  transition: opacity 0.5s ease-in-out;
+}
+
+#textslice {
+  background: linear-gradient( 45deg, #ff1500, #f4dd91, #71f6db, #26dbf7, #6c8edf);
+  background-size: 10%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.popup {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.popup h2 {
+  margin-top: 0;
+}
+
+.popup input[type="text"],
+.popup input[type="email"],
+.popup input[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+.popup input[type="submit"] {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.popup input[type="submit"]:hover {
+  background-color: #0056b3;
 }

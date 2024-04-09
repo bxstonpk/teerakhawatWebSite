@@ -1,10 +1,21 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import ImgSlice from "../component/ImgSlice";
+import TextSlice from "../component/TextSlice"
+import Quotation from "../component/quotation";
+
+/*
+  lg:px-20 xl:px-48 2xl:px-72
+*/
+
+var images = ['./GallonSim.png', './bucketSim.png'];
+var text = ['GALLON', '----> BUCKET']
+var interval = 2000;
 
 function Content() {
   return (
     <section id="Home" className="">
-      <div className="flex mx-4 mt-4 lg:mx-20 xl:mx-32 content-center">
+      <div className="flex mx-4 mt-4 lg:px-20 xl:px-48 2xl:px-72 content-center">
         <div className="">
           <div className="">
             <span className="text-base border-l-2 border-l-primary-1000 pl-6">
@@ -19,46 +30,38 @@ function Content() {
               in order to have quality products and is trusted by customers.
             </p>
           </div>
-          <div className="my-10 md:my-14 lg:my-16 border-primary-700 border-2 h-12 lg:h-16 w-40 md:w-72 lg:w-96 content-center text-center rounded-3xl">
-            <span className="text-xl md:text-2xl lg:text-4xl">GALLON</span>
-          </div>
+          <TextSlice text={text} interval={interval}></TextSlice>
           <div className="">
             <span className=" md:text-xl lg:text-3xl">
               บริษัท ธีรฆวัฒน์ แคน จำกัด
             </span>
-            <div className="pt-1 md:pt-2">
+            <div className="pt-1 md:pt-2 lg:pt-4 md:pr-56 lg:pr-60 2xl:pr-72" id="context-gride">
               <span className="text-sm md:text-xl lg:text-3xl">
-                ผู้ผลิต จำหน่าย และรับจ้างผลิต ปี๊บวิลาส แกลลอนวิลาส
+                ผู้ผลิต จำหน่าย และรับจ้างผลิต ปี๊บเหลี่ยมฝาเกลียว ปี๊บเหลี่ยมฝาป๊อบอัพ ปี๊บเหลี่ยมฝาเกลียวสีทอง แกลลอนเหลี่ยม
               </span>
             </div>
           </div>
           <div className="mt-10 flex">
-            <div className="border-2 w-32 h-10 md:w-48 md:h-12 lg:w-52 lg:h-16 text-center content-center bg-primary-700 text-white rounded-lg hover:rounded-3xl hover:bg-primary-800">
-              <a href="#">
-                <span className="md:text-xl lg:text-2xl">ขอใบเสนอราคา</span>
-              </a>
+            <div className="border-2 w-32 h-10 md:w-48 border-primary-700 md:h-12 lg:w-52 lg:h-16 text-center content-center bg-primary-700 text-white rounded-lg hover:border-red-300 hover:rounded-3xl hover:bg-primary-800">
+              <button id="showFormButton" className="md:text-xl lg:text-2xl">
+                ขอใบเสนอราคา
+              </button>
             </div>
-            <div className="w-32 h-10 md:w-48 md:h-12 lg:w-52 lg:h-16 text-center content-center ">
+
+            <div className="w-32 h-10 md:w-48 md:h-12 lg:w-52 lg:h-16 text-center content-center hover:text-blue-700">
               <Link to="/product">
                 <span className="md:text-xl lg:text-2xl">See More</span>
               </Link>
             </div>
           </div>
         </div>
-        <div className="grid absolute left-1/2" id="con-pic">
-          <img
-            src="./GallonSim.png"
-            alt="photo"
-            className="hidden md:block h-80 object-corver md:h-96 md:mt-10 md:object-cover"
-            id="con-img-right"
-          />
-        </div>
+        <ImgSlice images={images} interval={interval}></ImgSlice>
       </div>
       <div
         className="bg-primary-700 w-full h-fit rounded-3xl my-8"
         id="con-box"
       >
-        <div className="flex justify-between">
+        <div className="flex justify-between lg:px-20 2xl:px-48">
           <div className="text-white text-xl md:text-4xl lg:text-6xl content-center">
             <div className="ml-5 md:ml-10 lg:ml-20 mt-10 md:mt-16">
               <span>Teerakhawat Can</span>
@@ -75,9 +78,9 @@ function Content() {
             />
           </div>
         </div>
-        <div className="mx-4 md:mx-10 lg:mx-16 text-xs md:text-xl lg:text-3xl">
+        <div className="px-4 md:px-10 xl:px-48 2xl:px-72 text-xs md:text-xl lg:text-3xl">
           <div>
-            <div className="mb-4 text-white">
+            <div className="pb-4 text-white">
               <span>
                 ก่อตั้งปี พ.ศ. 2564 ตั้งอยู่เลขที่ 62/55 หมู่ที่ 2 ตำบลนาดี
                 อำเภอเมืองสมุทรสาคร จังหวัดสมุทรสาคร
@@ -95,7 +98,7 @@ function Content() {
             <div className="flex justify-end mr-8 my-8 lg:mr-24" id="read-more">
               <div></div>
               <div></div>
-              <div className="border-2 w-24 h-8 md:w-36 md:h-12 lg:w-52 lg:h-14 bg-primary-1000 text-center content-center rounded-2xl">
+              <div className="border-2 w-24 h-8 md:w-36 md:h-12 lg:w-52 lg:h-14 bg-primary-1000 text-center content-center rounded-2xl hover:border-red-400">
                 <Link to="/about">
                   <p>อ่านเพิ่มเติม</p>
                 </Link>
@@ -113,7 +116,9 @@ function Content() {
           id="product-items"
         >
           <div className="text-lg pt-4 content-center text-center">
-            <span className="text-xl md:text-2xl lg:text-4xl">ผลิตภัณฑ์ของเรา</span>
+            <span className="text-xl md:text-2xl lg:text-4xl">
+              ผลิตภัณฑ์ของเรา
+            </span>
           </div>
           <div className="flex justify-between mx-3 md:mx-32 my-4 md:my-8 lg:mx-72">
             <div className="border w-40 py-2 lg:py-4 lg:w-72 bg-white text-center text-xl lg:text-3xl rounded-xl cursor-pointer">
@@ -144,9 +149,7 @@ function Content() {
                 แกลลอนเหลี่ยมฝาเกลียว
               </span>
               <br />
-              <span className="text-xs md:text-sm lg:text-xl">
-                
-              </span>
+              <span className="text-xs md:text-sm lg:text-xl"></span>
             </div>
             <div className="flex justify-between mt-1">
               <p className="text-red-500 md:text-xl lg:text-2xl">Price : TBA</p>
@@ -175,9 +178,7 @@ function Content() {
                 ปี๊บเหลี่ยมฝาเกลียว
               </span>
               <br />
-              <span className="text-xs md:text-sm lg:text-xl">
-
-              </span>
+              <span className="text-xs md:text-sm lg:text-xl"></span>
             </div>
             <div className="flex justify-between mt-1">
               <p className="text-red-500 md:text-xl lg:text-2xl">Price : TBA</p>
@@ -206,9 +207,7 @@ function Content() {
                 ปี๊บเหลี่ยมฝาป๊อบอัพ
               </span>
               <br />
-              <span className="text-xs md:text-sm lg:text-xl">
-
-              </span>
+              <span className="text-xs md:text-sm lg:text-xl"></span>
             </div>
             <div className="flex justify-between mt-1">
               <p className="text-red-500 md:text-xl lg:text-2xl">Price : TBA</p>
@@ -237,9 +236,7 @@ function Content() {
                 ปี๊บเหลี่ยมฝาเกลียวสีทอง
               </span>
               <br />
-              <span className="text-xs md:text-sm lg:text-xl">
-
-              </span>
+              <span className="text-xs md:text-sm lg:text-xl"></span>
             </div>
             <div className="flex justify-between mt-1">
               <p className="text-red-500 md:text-xl lg:text-2xl">Price : TBA</p>
