@@ -4,14 +4,12 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from 'react-router-dom'
-import App from './App.jsx'
 import MainLayout from './Layout/MainLayout.jsx'
 import AboutLayout from './Layout/AboutLayout.jsx'
 import ProductLayout from './Layout/ProductLayout.jsx'
 import ContactLayout from './Layout/ContactLayout.jsx'
 
 import './index.css'
-import Quotation from './component/quotation.jsx'
 
 const router = createBrowserRouter([
   {
@@ -29,10 +27,6 @@ const router = createBrowserRouter([
   {
     path: "/contact",
     element: <ContactLayout />
-  },
-  {
-    path: "/quotation",
-    element: <Quotation />
   }
 ])
 

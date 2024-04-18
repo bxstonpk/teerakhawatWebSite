@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import ImgSlice from "../component/ImgSlice";
 import TextSlice from "../component/TextSlice";
-import Quotation from "../component/quotation";
 
 /*
   lg:px-20 xl:px-48 2xl:px-72

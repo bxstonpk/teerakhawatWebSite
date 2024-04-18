@@ -38,7 +38,7 @@ function Contact() {
             id="forminput"
           >
             <form className="bg-white shadow-md rounded-xl px-4 pt-6 pb-8 mb-4 md:text-xl lg:text-2xl">
-              <div class="mb-4">
+              <div className="mb-4">
                 <input
                   class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                   id="nameContact"
@@ -47,26 +47,26 @@ function Contact() {
                   onChange={(e) => setName(e.target.value)}
                 />
               </div>
-              <div class="mb-6">
+              <div className="mb-6">
                 <label
-                  class="block text-gray-700 text-sm font-bold mb-2"
+                  className="block text-gray-700 text-sm font-bold mb-2"
                   for="emailContact"
                 ></label>
                 <input
-                  class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
+                  className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
                   id="emailContact"
                   type="emailContact"
                   placeholder="E-mail"
                   onChange={(e) => setEmail(e.target.value)}
                 />
               </div>
-              <div class="mb-6">
+              <div className="mb-6">
                 <label
-                  class="block text-gray-700 text-sm font-bold mb-2"
+                  className="block text-gray-700 text-sm font-bold mb-2"
                   for="messageContact"
                 ></label>
                 <textarea
-                  class="shadow appearance-none border rounded w-full pb-16 py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
+                  className="shadow appearance-none border rounded w-full pb-16 py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
                   id="messageContact"
                   type="text"
                   placeholder="Message"
