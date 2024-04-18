@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function ProductCard() {
   return (
@@ -11,9 +12,7 @@ function ProductCard() {
       <div className="flex justify-between pb-4 lg:pb-8">
         <div></div>
         <div className="border-2 w-32 py-2 md:py-3 md:w-48 lg:w-52 text-center bg-primary-700 text-white rounded-lg hover:rounded-3xl hover:bg-primary-800">
-          <a href="#">
-            <span className="md:text-xl lg:text-2xl">ขอใบเสนอราคา</span>
-          </a>
+          <span className="md:text-xl lg:text-2xl">ขอใบเสนอราคา</span>
         </div>
         <div></div>
       </div>

@@ -11,6 +11,7 @@ import ProductLayout from './Layout/ProductLayout.jsx'
 import ContactLayout from './Layout/ContactLayout.jsx'
 
 import './index.css'
+import Quotation from './component/quotation.jsx'
 
 const router = createBrowserRouter([
   {
@@ -29,6 +30,10 @@ const router = createBrowserRouter([
     path: "/contact",
     element: <ContactLayout />
   },
+  {
+    path: "/quotation",
+    element: <Quotation />
+  }
 ])
 
 ReactDOM.createRoot(document.getElementById('root')).render(

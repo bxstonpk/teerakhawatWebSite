@@ -106,3 +106,8 @@
 .popup input[type="submit"]:hover {
   background-color: #0056b3;
 }
+
+
+#selectProduct {
+  top: 480px;
+}

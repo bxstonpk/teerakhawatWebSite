@@ -107,7 +107,7 @@ function Nav() {
       <hr />
       {isMenuOpen ? (
         <div className="w-full">
-          <ul className="flex-col h-full font-medium lg:hidden bg-white">
+          <ul className="flex-col text-center absolute h-full w-full font-medium lg:hidden bg-white">
             <li className="p-2">
               <Link
                 to="/"

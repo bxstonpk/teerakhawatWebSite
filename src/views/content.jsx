@@ -1,15 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import ImgSlice from "../component/ImgSlice";
-import TextSlice from "../component/TextSlice"
+import TextSlice from "../component/TextSlice";
 import Quotation from "../component/quotation";
 
 /*
   lg:px-20 xl:px-48 2xl:px-72
 */
 
-var images = ['./GallonSim.png', './bucketSim.png'];
-var text = ['GALLON', '----> BUCKET']
+var images = ["./GallonSim.png", "./bucketSim.png"];
+var text = ["GALLON", "----> BUCKET"];
 var interval = 2000;
 
 function Content() {
@@ -35,17 +35,19 @@ function Content() {
             <span className=" md:text-xl lg:text-3xl">
               บริษัท ธีรฆวัฒน์ แคน จำกัด
             </span>
-            <div className="pt-1 md:pt-2 lg:pt-4 md:pr-56 lg:pr-60 2xl:pr-72" id="context-gride">
+            <div
+              className="pt-1 md:pt-2 lg:pt-4 md:pr-56 lg:pr-60 2xl:pr-72"
+              id="context-gride"
+            >
               <span className="text-sm md:text-xl lg:text-3xl">
-                ผู้ผลิต จำหน่าย และรับจ้างผลิต ปี๊บเหลี่ยมฝาเกลียว ปี๊บเหลี่ยมฝาป๊อบอัพ ปี๊บเหลี่ยมฝาเกลียวสีทอง แกลลอนเหลี่ยม
+                ผู้ผลิต จำหน่าย และรับจ้างผลิต ปี๊บเหลี่ยมฝาเกลียว
+                ปี๊บเหลี่ยมฝาป๊อบอัพ ปี๊บเหลี่ยมฝาเกลียวสีทอง แกลลอนเหลี่ยม
               </span>
             </div>
           </div>
           <div className="mt-10 flex">
             <div className="border-2 w-32 h-10 md:w-48 border-primary-700 md:h-12 lg:w-52 lg:h-16 text-center content-center bg-primary-700 text-white rounded-lg hover:border-red-300 hover:rounded-3xl hover:bg-primary-800">
-              <button id="showFormButton" className="md:text-xl lg:text-2xl">
-                ขอใบเสนอราคา
-              </button>
+              ขอใบเสนอราคา
             </div>
 
             <div className="w-32 h-10 md:w-48 md:h-12 lg:w-52 lg:h-16 text-center content-center hover:text-blue-700">

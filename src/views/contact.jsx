@@ -1,6 +1,10 @@
-import React from "react";
+import React, { useState} from "react";
 
 function Contact() {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [Message, setMessage] = useState('');
+
   return (
     <section id="contactpage">
       <div className="text-center my-4 md:my-8 md:text-xl lg:text-2xl">
@@ -37,35 +41,37 @@ function Contact() {
               <div class="mb-4">
                 <input
                   class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                  id="name"
+                  id="nameContact"
                   type="text"
                   placeholder="Name"
+                  onChange={(e) => setName(e.target.value)}
                 />
               </div>
               <div class="mb-6">
                 <label
                   class="block text-gray-700 text-sm font-bold mb-2"
-                  for="email"
+                  for="emailContact"
                 ></label>
                 <input
                   class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
-                  id="email"
-                  type="email"
+                  id="emailContact"
+                  type="emailContact"
                   placeholder="E-mail"
+                  onChange={(e) => setEmail(e.target.value)}
                 />
               </div>
               <div class="mb-6">
                 <label
                   class="block text-gray-700 text-sm font-bold mb-2"
-                  for="message"
+                  for="messageContact"
                 ></label>
-                <input
-                  class="shadow appearance-none border rounded w-full h-32 py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
-                  id="message"
+                <textarea
+                  class="shadow appearance-none border rounded w-full pb-16 py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
+                  id="messageContact"
                   type="text"
                   placeholder="Message"
-                  maxlength="10"
-                />
+                  onChange={(e) => setMessage(e.target.value)}
+                ></ textarea>
               </div>
               <div className="flex justify-between">
                 <div></div>
