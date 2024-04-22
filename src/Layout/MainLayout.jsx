@@ -1,16 +1,27 @@
-import React from 'react'
-import Nav from '../component/Nav'
-import Footer from '../component/footer'
-import Content from '../views/content'
+import React from "react";
+import Nav from "../component/Nav";
+import Footer from "../component/footer";
+import Content from "../views/content";
 
-import '../App.css'
+import "../App.css";
 
 function MainLayout() {
-  return <section id='main-Layout'>
-    <Nav></Nav>
-    <Content></Content>
-    <Footer></Footer>
-  </section>
+  return (
+    changeDocumentTitle(),
+    <section id="main-Layout">
+      <Nav></Nav>
+      <Content></Content>
+      <Footer></Footer>
+    </section>
+  );
 }
 
-export default MainLayout
+var documentTitle = "Home - Teerakhawat Can Company limited ผู้ผลิต จำหน่าย แกลลอน ปี๊บ บรรจุภัณฑ์ แกลลอนเหลี่ยมฝาเกลียว แกลลอนเหลี่ยมฝาป๊อบอัพ ปี๊บทอง ปี๊บเหลียมฝาเกลียว";
+
+function changeDocumentTitle() {
+  if (document.title !== documentTitle) {
+    document.title = documentTitle;
+  }
+}
+
+export default MainLayout;

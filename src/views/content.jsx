@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import ImgSlice from "../component/ImgSlice";
 import TextSlice from "../component/TextSlice";
@@ -8,10 +8,11 @@ import TextSlice from "../component/TextSlice";
 */
 
 var images = ["./GallonSim.png", "./bucketSim.png"];
-var text = ["GALLON", "----> BUCKET"];
+var text = ["GALLON", "---> BUCKET"];
 var interval = 2000;
 
 function Content() {
+
   return (
     <section id="Home" className="">
       <div className="flex mx-4 mt-4 lg:px-20 xl:px-48 2xl:px-72 content-center">
@@ -22,14 +23,15 @@ function Content() {
             </span>
           </div>
           <div className="mt-6 lg:mt-10">
-            <p className="text-xs md:text-base lg:text-4xl">
+            <span className="text-xs md:text-base lg:text-4xl">
               Our product are made with meticulous care.
-            </p>
-            <p className="text-xs md:text-base lg:text-3xl">
+            </span>
+            <br />
+            <span className="text-xs md:text-base lg:text-3xl">
               in order to have quality products and is trusted by customers.
-            </p>
+            </span>
           </div>
-          <TextSlice text={text} interval={interval}></TextSlice>
+            <TextSlice text={text} interval={interval}></TextSlice>
           <div className="">
             <span className=" md:text-xl lg:text-3xl">
               บริษัท ธีรฆวัฒน์ แคน จำกัด
@@ -63,7 +65,9 @@ function Content() {
         id="con-box"
       >
         <div className="flex justify-between lg:px-20 2xl:px-48">
-          <div className="text-white text-xl md:text-4xl lg:text-6xl content-center">
+          <div
+            className="text-white text-xl md:text-4xl lg:text-6xl content-center"
+          >
             <div className="ml-5 md:ml-10 lg:ml-20 mt-10 md:mt-16">
               <span>Teerakhawat Can</span>
             </div>
@@ -116,16 +120,22 @@ function Content() {
           className="bg-gray-300 w-full h-fit rounded-2xl"
           id="product-items"
         >
-          <div className="text-lg pt-4 content-center text-center">
+          <div
+            className="text-lg pt-4 content-center text-center"
+          >
             <span className="text-xl md:text-2xl lg:text-4xl">
               ผลิตภัณฑ์ของเรา
             </span>
           </div>
           <div className="flex justify-between mx-3 md:mx-32 my-4 md:my-8 lg:mx-72">
-            <div className="border w-40 py-2 lg:py-4 lg:w-72 bg-white text-center text-xl lg:text-3xl rounded-xl cursor-pointer">
+            <div
+              className="border w-40 py-2 lg:py-4 lg:w-72 bg-white text-center text-xl lg:text-3xl rounded-xl cursor-pointer"
+            >
               <span>ปี๊บ</span>
             </div>
-            <div className="border w-40 py-2 lg:py-4 lg:w-72 bg-white text-center text-xl lg:text-3xl rounded-xl cursor-pointer">
+            <div
+              className="border w-40 py-2 lg:py-4 lg:w-72 bg-white text-center text-xl lg:text-3xl rounded-xl cursor-pointer"
+            >
               <span>แกลลอน</span>
             </div>
           </div>
@@ -133,7 +143,9 @@ function Content() {
         <div className="w-2 md:w-12"></div>
       </div>
       <div className="grid grid-cols-2 md:mx-32 gap-2 lg:flex lg:justify-between mx-6 my-6 lg:mx-48 md:my-10">
-        <div className="border border-gray-400 rounded-2xl bg-white py-2 md:w-56 lg:w-72 cursor-pointer">
+        <div
+          className="border border-gray-400 rounded-2xl bg-white py-2 md:w-56 lg:w-72 cursor-pointer"
+        >
           <div className="">
             <img
               src="./gallonreal.png"
@@ -162,7 +174,9 @@ function Content() {
             </div>
           </div>
         </div>
-        <div className="border border-gray-400 rounded-2xl bg-white py-2 md:w-56 lg:w-72 cursor-pointer">
+        <div
+          className="border border-gray-400 rounded-2xl bg-white py-2 md:w-56 lg:w-72 cursor-pointer"
+        >
           <div className="">
             <img
               src="./bucketreal.png"
@@ -191,7 +205,9 @@ function Content() {
             </div>
           </div>
         </div>
-        <div className="border border-gray-400 rounded-2xl bg-white py-2 md:w-56 lg:w-72 cursor-pointer">
+        <div
+          className="border border-gray-400 rounded-2xl bg-white py-2 md:w-56 lg:w-72 cursor-pointer"
+        >
           <div className="">
             <img
               src="./bucketpopup.png"
@@ -220,7 +236,9 @@ function Content() {
             </div>
           </div>
         </div>
-        <div className="border border-gray-400 rounded-2xl bg-white py-2 md:w-56 lg:w-72 cursor-pointer">
+        <div
+          className="border border-gray-400 rounded-2xl bg-white py-2 md:w-56 lg:w-72 cursor-pointer"
+        >
           <div className="">
             <img
               src="./bucketgold.png"
