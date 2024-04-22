@@ -105,8 +105,7 @@ function Footer() {
       </div>
       <div className="w-full h-12 text-white text-xs lg:h-16 md:text-base lg:text-xl bg-gray-900 content-center text-center">
         <span>
-          Copyright © 2024 Teerakhawat Can Co.,LTD. All rights reserved. Powered
-          by Prasit K.
+          Copyright © 2024 Teerakhawat Can Co.,LTD. Powered by Prasit K.
         </span>
       </div>
     </section>
