@@ -1,29 +1,42 @@
-import React, { useRef } from "react";
+import { React, useRef, useState } from "react";
+import { Link } from "react-router-dom";
 import emailjs from "@emailjs/browser";
+import NotifyCancel from "./notifyCancel";
+import NotifySubmit from "./notifySubmit";
 
 function QuotationForm() {
+  
   const form = useRef();
 
   const sendEmail = (e) => {
     e.preventDefault();
 
     emailjs
-      .sendForm("service_8ofuk61", "template_8hugp6d", form.current, {
-        publicKey: "m0JBf9d5-DgUriMGv",
+      .sendForm("service_f8yj02h", "template_y1drxp7", form.current, {
+        publicKey: "4PsKRkfJbztNwccWO",
       })
       .then(
-        () => {
+        (res) => {
+          if (res.status === 200) {
+            document.getElementById("NotifySubmit").style.display = "block";
+            document.getElementById("qtForm").style.filter = "blur(4px)";
+          }
           console.log("SUCCESS!");
         },
         (error) => {
-          console.log("FAILED...", error.text);
-        },
+          console.log("FAILED >>>", error.text);
+        }
       );
   };
 
+  const showNotifyCancel = () => {
+    document.getElementById("NotifyCancel").style.display = "block";
+    document.getElementById("qtForm").style.filter = "blur(4px)";
+  }
+
   return (
     <section className="absolute">
-      <div className="w-screen h-screen py-8 px-4 md:px-32 lg:px-52 xl:px-80 2xl:px-96">
+      <div className="w-screen h-screen py-8 px-4 md:px-32 lg:px-52 xl:px-80 2xl:px-96 blur-none" id="qtForm">
         <div className="bg-black py-2 rounded-lg  text-center">
           <span className="text-white">Quatation Teerakhawat Can Co.,LTD.</span>
         </div>
@@ -31,6 +44,8 @@ function QuotationForm() {
           <form
             ref={form}
             onSubmit={sendEmail}
+            method="post"
+            encType="text/plain"
             className="bg-white shadow-md rounded-xl px-4 pt-6 pb-8 mb-4 md:text-xl lg:text-2xl"
           >
             <b>Information</b>
@@ -40,6 +55,7 @@ function QuotationForm() {
               className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
               id="nameQT"
               placeholder="Name"
+              required
             />
             <input
               type="text"
@@ -47,6 +63,7 @@ function QuotationForm() {
               className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
               id="adQT"
               placeholder="Address"
+              required
             />
             <input
               type="text"
@@ -54,6 +71,7 @@ function QuotationForm() {
               className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
               id="ctQT"
               placeholder="Contact"
+              required
             />
             <input
               type="text"
@@ -68,6 +86,7 @@ function QuotationForm() {
               className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
               id="emailQT"
               placeholder="E-mail"
+              required
             />
             <b className="">Quotation Form</b>
             <br />
@@ -75,17 +94,28 @@ function QuotationForm() {
               name="qtProduct1"
               id="product1"
               className="my-4 border py-2 w-full"
+              required
             >
               <option value="">Select Product to Quotation</option>
               <optgroup label="แกลลอน">
-                <option value="gl">แกลลอนเหลี่ยมฝาเกลียว</option>
-                <option value="glp">แกลลอนเหลี่ยมฝาป๊อบอัพ</option>
+                <option value="แกลลอนเหลี่ยมฝาเกลียว">
+                  แกลลอนเหลี่ยมฝาเกลียว
+                </option>
+                <option value="แกลลอนเหลี่ยมฝาป๊อบอัพ">
+                  แกลลอนเหลี่ยมฝาป๊อบอัพ
+                </option>
               </optgroup>
               <optgroup label="ปี๊บเหลี่ยม">
-                <option value="bk">ปี๊บเหลี่ยมฝาเกลียว</option>
-                <option value="bkp">ปี๊บเหลี่ยมฝาป๊อบอัพ</option>
-                <option value="pkg">ปี๊บเหลี่ยมฝาเกลียวสีทอง</option>
-                <option value="pkl">ปี๊บเหลี่ยมสีทองฝากว้าง</option>
+                <option value="ปี๊บเหลี่ยมฝาเกลียว">ปี๊บเหลี่ยมฝาเกลียว</option>
+                <option value="ปี๊บเหลี่ยมฝาป๊อบอัพ">
+                  ปี๊บเหลี่ยมฝาป๊อบอัพ
+                </option>
+                <option value="ปี๊บเหลี่ยมฝาเกลียวสีทอง">
+                  ปี๊บเหลี่ยมฝาเกลียวสีทอง
+                </option>
+                <option value="ปี๊บเหลี่ยมสีทองฝากว้าง">
+                  ปี๊บเหลี่ยมสีทองฝากว้าง
+                </option>
               </optgroup>
             </select>
             <br />
@@ -96,14 +126,24 @@ function QuotationForm() {
             >
               <option value="">Select Product to Quotation</option>
               <optgroup label="แกลลอน">
-                <option value="gl">แกลลอนเหลี่ยมฝาเกลียว</option>
-                <option value="glp">แกลลอนเหลี่ยมฝาป๊อบอัพ</option>
+                <option value="แกลลอนเหลี่ยมฝาเกลียว">
+                  แกลลอนเหลี่ยมฝาเกลียว
+                </option>
+                <option value="แกลลอนเหลี่ยมฝาป๊อบอัพ">
+                  แกลลอนเหลี่ยมฝาป๊อบอัพ
+                </option>
               </optgroup>
               <optgroup label="ปี๊บเหลี่ยม">
-                <option value="bk">ปี๊บเหลี่ยมฝาเกลียว</option>
-                <option value="bkp">ปี๊บเหลี่ยมฝาป๊อบอัพ</option>
-                <option value="pkg">ปี๊บเหลี่ยมฝาเกลียวสีทอง</option>
-                <option value="pkl">ปี๊บเหลี่ยมสีทองฝากว้าง</option>
+                <option value="ปี๊บเหลี่ยมฝาเกลียว">ปี๊บเหลี่ยมฝาเกลียว</option>
+                <option value="ปี๊บเหลี่ยมฝาป๊อบอัพ">
+                  ปี๊บเหลี่ยมฝาป๊อบอัพ
+                </option>
+                <option value="ปี๊บเหลี่ยมฝาเกลียวสีทอง">
+                  ปี๊บเหลี่ยมฝาเกลียวสีทอง
+                </option>
+                <option value="ปี๊บเหลี่ยมสีทองฝากว้าง">
+                  ปี๊บเหลี่ยมสีทองฝากว้าง
+                </option>
               </optgroup>
             </select>
             <br />
@@ -114,14 +154,24 @@ function QuotationForm() {
             >
               <option value="">Select Product to Quotation</option>
               <optgroup label="แกลลอน">
-                <option value="gl">แกลลอนเหลี่ยมฝาเกลียว</option>
-                <option value="glp">แกลลอนเหลี่ยมฝาป๊อบอัพ</option>
+                <option value="แกลลอนเหลี่ยมฝาเกลียว">
+                  แกลลอนเหลี่ยมฝาเกลียว
+                </option>
+                <option value="แกลลอนเหลี่ยมฝาป๊อบอัพ">
+                  แกลลอนเหลี่ยมฝาป๊อบอัพ
+                </option>
               </optgroup>
               <optgroup label="ปี๊บเหลี่ยม">
-                <option value="bk">ปี๊บเหลี่ยมฝาเกลียว</option>
-                <option value="bkp">ปี๊บเหลี่ยมฝาป๊อบอัพ</option>
-                <option value="pkg">ปี๊บเหลี่ยมฝาเกลียวสีทอง</option>
-                <option value="pkl">ปี๊บเหลี่ยมสีทองฝากว้าง</option>
+                <option value="ปี๊บเหลี่ยมฝาเกลียว">ปี๊บเหลี่ยมฝาเกลียว</option>
+                <option value="ปี๊บเหลี่ยมฝาป๊อบอัพ">
+                  ปี๊บเหลี่ยมฝาป๊อบอัพ
+                </option>
+                <option value="ปี๊บเหลี่ยมฝาเกลียวสีทอง">
+                  ปี๊บเหลี่ยมฝาเกลียวสีทอง
+                </option>
+                <option value="ปี๊บเหลี่ยมสีทองฝากว้าง">
+                  ปี๊บเหลี่ยมสีทองฝากว้าง
+                </option>
               </optgroup>
             </select>
             <br />
@@ -132,14 +182,16 @@ function QuotationForm() {
               >
                 Submit
               </button>
-              <button type="button" className="px-8 py-1 hover:text-red-600">
+              <button type="button" className="px-8 py-1 hover:text-red-600" onClick={showNotifyCancel}>
                 Cancel
               </button>
             </div>
           </form>
         </div>
       </div>
-    </section>
+      <NotifyCancel></NotifyCancel>
+      <NotifySubmit></NotifySubmit>
+    </section> 
   );
 }
 

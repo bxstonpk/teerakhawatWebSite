@@ -48,7 +48,7 @@ function Content() {
           </div>
           <div className="mt-10 flex">
             <div className="border-2 w-32 h-10 md:w-48 border-primary-700 md:h-12 lg:w-52 lg:h-16 text-center content-center bg-primary-700 text-white rounded-lg hover:border-red-300 hover:rounded-3xl hover:bg-primary-800">
-              ขอใบเสนอราคา
+              <Link to="/quotation">ขอใบเสนอราคา</Link>
             </div>
 
             <div className="w-32 h-10 md:w-48 md:h-12 lg:w-52 lg:h-16 text-center content-center hover:text-blue-700">

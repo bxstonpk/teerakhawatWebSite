@@ -1,9 +1,24 @@
-import React, { useState} from "react";
+import React, { useRef, useState } from "react";
 
 function Contact() {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [Message, setMessage] = useState('');
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm("service_f8yj02h", "template_zfaldbf", form.current, {
+        publicKey: "4PsKRkfJbztNwccWO",
+      })
+      .then(
+        () => {
+          console.log("SUCCESS!");
+        },
+        (error) => {
+          console.log("FAILED >>>", error.text);
+        }
+      );
+  };
 
   return (
     <section id="contactpage">
@@ -37,14 +52,17 @@ function Contact() {
             className="w-full max-w-xs md:max-w-lg lg:max-w-2xl"
             id="forminput"
           >
-            <form className="bg-white shadow-md rounded-xl px-4 pt-6 pb-8 mb-4 md:text-xl lg:text-2xl">
+            <form
+              onSubmit={sendEmail}
+              className="bg-white shadow-md rounded-xl px-4 pt-6 pb-8 mb-4 md:text-xl lg:text-2xl"
+            >
               <div className="mb-4">
                 <input
                   class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                   id="nameContact"
                   type="text"
                   placeholder="Name"
-                  onChange={(e) => setName(e.target.value)}
+                  name="contactName"
                 />
               </div>
               <div className="mb-6">
@@ -53,11 +71,11 @@ function Contact() {
                   for="emailContact"
                 ></label>
                 <input
+                  name="contactEmail"
                   className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
                   id="emailContact"
                   type="emailContact"
                   placeholder="E-mail"
-                  onChange={(e) => setEmail(e.target.value)}
                 />
               </div>
               <div className="mb-6">
@@ -66,12 +84,12 @@ function Contact() {
                   for="messageContact"
                 ></label>
                 <textarea
+                  name="contactMessage"
                   className="shadow appearance-none border rounded w-full pb-16 py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
                   id="messageContact"
                   type="text"
                   placeholder="Message"
-                  onChange={(e) => setMessage(e.target.value)}
-                ></ textarea>
+                ></textarea>
               </div>
               <div className="flex justify-between">
                 <div></div>

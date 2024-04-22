@@ -9,6 +9,7 @@ import AboutLayout from './Layout/AboutLayout.jsx'
 import ProductLayout from './Layout/ProductLayout.jsx'
 import ContactLayout from './Layout/ContactLayout.jsx'
 import QuotationForm from './component/quotation.jsx'
+import NotifyCancel from './component/notifyCancel.jsx'
 
 import './index.css'
 
@@ -32,6 +33,10 @@ const router = createBrowserRouter([
   {
     path: "/quotation",
     element: <QuotationForm />
+  },
+  {
+    path: "/notify",
+    element: <NotifyCancel />
   }
 ])
 

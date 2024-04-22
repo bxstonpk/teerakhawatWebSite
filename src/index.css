@@ -57,7 +57,7 @@
 }
 
 #bgbur {
-  background-color: rgba(17, 74, 160, 0.950);
+  background-color: rgba(17, 74, 160, 0.95);
   position: relative;
 }
 
@@ -66,7 +66,14 @@
 }
 
 #textslice {
-  background: linear-gradient( 45deg, #ff1500, #f4dd91, #71f6db, #26dbf7, #6c8edf);
+  background: linear-gradient(
+    45deg,
+    #ff1500,
+    #f4dd91,
+    #71f6db,
+    #26dbf7,
+    #6c8edf
+  );
   background-size: 10%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -107,7 +114,17 @@
   background-color: #0056b3;
 }
 
-
 #selectProduct {
   top: 480px;
+}
+
+#NotifyCancel,
+#NotifySubmit {
+  width: 250px;
+  height: 150px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -100px;
+  margin-left: -100px;
 }

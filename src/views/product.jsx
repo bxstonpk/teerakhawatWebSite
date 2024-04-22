@@ -12,7 +12,9 @@ function ProductCard() {
       <div className="flex justify-between pb-4 lg:pb-8">
         <div></div>
         <div className="border-2 w-32 py-2 md:py-3 md:w-48 lg:w-52 text-center bg-primary-700 text-white rounded-lg hover:rounded-3xl hover:bg-primary-800">
-          <span className="md:text-xl lg:text-2xl">ขอใบเสนอราคา</span>
+          <span className="md:text-xl lg:text-2xl">
+            <Link to="/quotation">ขอใบเสนอราคา</Link>
+          </span>
         </div>
         <div></div>
       </div>
