@@ -2,6 +2,7 @@ import React from "react";
 import Nav from "../component/Nav";
 import Footer from "../component/footer";
 import Content from "../views/content";
+import BannerCookie from "../component/bannerCookie";
 
 import "../App.css";
 
@@ -9,9 +10,14 @@ function MainLayout() {
   return (
     changeDocumentTitle(),
     <section id="main-Layout">
-      <Nav></Nav>
-      <Content></Content>
-      <Footer></Footer>
+      <div id="Content-MainLayout">
+        <Nav />
+        <Content />
+        <Footer />
+      </div>
+      <div id="Cookie-MainLayout">
+        <BannerCookie/>
+      </div>
     </section>
   );
 }

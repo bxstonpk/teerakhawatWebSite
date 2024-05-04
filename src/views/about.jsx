@@ -42,10 +42,10 @@ function About() {
             </div>
             <div className="mx-8 mt-4 text-white md:text-xl lg:text-2xl md:mx-10 lg:mx-36">
               <p className="">วิสัยทัศน์</p>
-              <p className="">
+              <span className="">
                 &emsp;เป็นบริษัทที่สร้างความมั่นใจ ทั้งคุณภาพ
                 และผลิตภัณฑ์ที่ดีให้กับลูกค้า
-              </p>
+              </span>
             </div>
             <div className="h-8 md:h-10 lg:h-16"></div>
           </div>

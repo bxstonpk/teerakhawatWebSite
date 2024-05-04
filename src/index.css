@@ -133,3 +133,16 @@
   color: #fff;
   background-color: #1d4ed8;
 }
+
+#main-Layout {
+  
+}
+
+#Content-MainLayout {
+  padding-bottom: 8px;
+}
+
+#Cookie-MainLayout {
+  bottom: 0;
+  position: fixed;
+}
