@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef } from "react";
 
 function Contact() {
   const form = useRef();
@@ -7,15 +7,18 @@ function Contact() {
     e.preventDefault();
 
     emailjs
-      .sendForm("service_f8yj02h", "template_zfaldbf", form.current, {
+      .sendForm("service_f8yj02h", "template_41792hj", form.current, {
         publicKey: "4PsKRkfJbztNwccWO",
       })
       .then(
         () => {
           console.log("SUCCESS!");
+          alert("Message sent successfully");
+          window.location.href("/contact")
         },
         (error) => {
           console.log("FAILED >>>", error.text);
+          alert("Failed to send message");
         }
       );
   };
@@ -58,7 +61,7 @@ function Contact() {
             >
               <div className="mb-4">
                 <input
-                  class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                  className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                   id="nameContact"
                   type="text"
                   placeholder="Name"
@@ -68,7 +71,7 @@ function Contact() {
               <div className="mb-6">
                 <label
                   className="block text-gray-700 text-sm font-bold mb-2"
-                  for="emailContact"
+                  htmlFor="emailContact"
                 ></label>
                 <input
                   name="contactEmail"
@@ -81,7 +84,7 @@ function Contact() {
               <div className="mb-6">
                 <label
                   className="block text-gray-700 text-sm font-bold mb-2"
-                  for="messageContact"
+                  htmlFor="messageContact"
                 ></label>
                 <textarea
                   name="contactMessage"
@@ -94,9 +97,9 @@ function Contact() {
               <div className="flex justify-between">
                 <div></div>
                 <div className=" w-48 py-4 md:w-48 md:py-4 lg:w-72 lg:py-4 bg-primary-1000 text-center content-center rounded-2xl cursor-pointer">
-                  <a href="#">
+                  <button type="submit">
                     <p>Send Message</p>
-                  </a>
+                  </button>
                 </div>
                 <div></div>
               </div>
@@ -126,7 +129,7 @@ function Contact() {
               className="flex mr-3 h-6 my-3 md:h-7 lg:h-8"
             >
               <img src="./phone-call.png" alt="phone" className="" />
-              <span className="px-3">061 497 9998 (ฝ่ายขาย)</span>
+              <span className="px-3">082 839 4189 (ฝ่ายขาย)</span>
             </a>
           </div>
           <div className="flex mr-3 h-6 my-3 md:h-7 lg:h-8">

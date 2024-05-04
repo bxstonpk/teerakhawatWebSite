@@ -9,10 +9,10 @@ function Footer() {
   }, []);
 
   return (
+    <>
     <section id="footer">
       <div className="w-full py-4 md:py-6 xl:py-8 md:text-2xl lg:text-3xl 2xl:text-4xl text-black bg-gray-300 content-center text-center">
-        <div data-aos="zoom-in"
-        data-aos-duration="5000">
+        <div data-aos="zoom-in" data-aos-duration="5000">
           <span>Don't waste another minute, get yours now.</span>
         </div>
       </div>
@@ -56,11 +56,11 @@ function Footer() {
           </div>
           <div className="">
             <a
-              href="tel:0614979998"
+              href="tel:0828394189"
               className="flex mr-3 h-6 my-3 md:h-7 lg:h-8"
             >
               <img src="./phone-call.png" alt="phone" className="" />
-              <span className="px-3">061 497 9998 (ฝ่ายขาย)</span>
+              <span className="px-3">082 839 4189 (ฝ่ายขาย)</span>
             </a>
           </div>
           <div className="flex mr-3 h-6 my-3 md:h-7 lg:h-8">
@@ -95,11 +95,13 @@ function Footer() {
               alt="facebook"
               className="mr-5 h-14 my-3 md:h-12 lg:h-12"
             />
-            <img
-              src="./line.png"
-              alt="line"
-              className="mr-5 h-14 my-3 md:h-12 lg:h-12"
-            />
+            <a href="https://lin.ee/WJb3Fds">
+              <img
+                src="./line.png"
+                alt="line"
+                className="mr-5 h-14 my-3 md:h-12 lg:h-12"
+              />
+            </a>
           </div>
         </div>
       </div>
@@ -109,6 +111,7 @@ function Footer() {
         </span>
       </div>
     </section>
+    </>
   );
 }
 

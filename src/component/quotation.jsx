@@ -1,5 +1,4 @@
-import { React, useRef, useState } from "react";
-import { Link } from "react-router-dom";
+import { React, useRef } from "react";
 import emailjs from "@emailjs/browser";
 import NotifyCancel from "./notifyCancel";
 import NotifySubmit from "./notifySubmit";

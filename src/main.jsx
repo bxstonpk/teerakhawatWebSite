@@ -10,6 +10,7 @@ import ProductLayout from './Layout/ProductLayout.jsx'
 import ContactLayout from './Layout/ContactLayout.jsx'
 import QuotationForm from './component/quotation.jsx'
 import NotifyCancel from './component/notifyCancel.jsx'
+import LoginLayout from './Layout/LoginLayout.jsx'
 
 import './index.css'
 
@@ -37,7 +38,11 @@ const router = createBrowserRouter([
   {
     path: "/notify",
     element: <NotifyCancel />
-  }
+  },
+  {
+    path: "/login",
+    element: <LoginLayout />
+  },
 ])
 
 ReactDOM.createRoot(document.getElementById('root')).render(

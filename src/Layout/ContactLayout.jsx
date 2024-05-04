@@ -16,7 +16,8 @@ function ContactLayout() {
   );
 }
 
-var documentTitle = "Contact - Teerakhawat Can Company limited ผู้ผลิต จำหน่าย แกลลอน ปี๊บ บรรจุภัณฑ์ แกลลอนเหลี่ยมฝาเกลียว แกลลอนเหลี่ยมฝาป๊อบอัพ ปี๊บทอง ปี๊บเหลียมฝาเกลียว";
+var documentTitle =
+  "Contact - Teerakhawat Can Company limited ผู้ผลิต จำหน่าย แกลลอน ปี๊บ บรรจุภัณฑ์ แกลลอนเหลี่ยมฝาเกลียว แกลลอนเหลี่ยมฝาป๊อบอัพ ปี๊บทอง ปี๊บเหลียมฝาเกลียว";
 
 function changeDocumentTitle() {
   if (document.title !== documentTitle) {
