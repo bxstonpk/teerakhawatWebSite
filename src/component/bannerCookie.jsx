@@ -8,7 +8,7 @@ function BannerCookie() {
   return (
     <>
       <div className="abolute w-screen block" id="cookie-banner">
-        <div className="flex justify-center items-center h-16 bg-gray-900 text-white">
+        <div className="flex justify-center items-center h-16 text-white">
           <p className="text-center">
             We use cookies to ensure you get the best experience on our website.{" "}
             <a href="#" className="underline">
