@@ -15,7 +15,7 @@ function ImgSlice({ images, interval }) {
     <div className="grid absolute left-1/2 overflow-hidden" id="con-pic">
       <img
         src={images[currentIndex]}
-        alt={`Image ${currentIndex + 1}`}
+        alt={`${currentIndex + 1}`}
         className="hidden md:block h-80 object-corver md:h-96 md:mt-10 md:object-cover"
         id="con-img-right"
       />

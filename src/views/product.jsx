@@ -30,7 +30,7 @@ function ProductCard() {
             <div className="">
               <img
                 src="./gallonreal.png"
-                alt="product"
+                alt="แกลลอน แกลลอนเหลี่ยม แกลลอนเหลี่ยมฝาเกลียว 1.5 น้ำหนัก 0.4 กก."
                 className="w-32 h-32 object-cover content-center justify-center md:w-48 md:h-48 lg:w-56 lg:h-56"
               />
             </div>
@@ -49,7 +49,7 @@ function ProductCard() {
             <div className="">
               <img
                 src="./gallonreal.png"
-                alt="product"
+                alt=""
                 className="w-32 h-32 object-cover content-center justify-center md:w-48 md:h-48 lg:w-56 lg:h-56"
               />
             </div>
@@ -68,7 +68,7 @@ function ProductCard() {
             <div className="">
               <img
                 src="./gallonreal.png"
-                alt="product"
+                alt=""
                 className="w-32 h-32 object-cover content-center justify-center md:w-48 md:h-48 lg:w-56 lg:h-56"
               />
             </div>
@@ -99,7 +99,7 @@ function ProductCard() {
             <div className="">
               <img
                 src="./bucketreal.png"
-                alt="product"
+                alt="ปี๊บเหลี่ยม ปี๊บ"
                 className="w-32 h-32 object-cover content-center justify-center md:w-48 md:h-48 lg:w-56 lg:h-56"
               />
             </div>

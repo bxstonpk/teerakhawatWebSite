@@ -80,7 +80,7 @@ function Content() {
             <div className="lg:mr-24 lg:mt-8">
               <img
                 src="./location.jpg"
-                alt="picFac"
+                alt="บริษัท ธีรฆวัฒน์ แคน จำกัด"
                 className="m-8 w-32 h-32 md:w-52 md:h-52 lg:w-72 lg:h-72 border-double border-2 rounded-full object-cover"
               />
             </div>
@@ -146,7 +146,7 @@ function Content() {
             <div className="">
               <img
                 src="./gallonreal.png"
-                alt="product"
+                alt="แกลลอน แกลลอนเหลียม"
                 className="w-32 h-32 object-cover content-center justify-center md:w-48 md:h-48 lg:w-56 lg:h-56"
               />
             </div>
@@ -177,7 +177,7 @@ function Content() {
             <div className="">
               <img
                 src="./bucketreal.png"
-                alt="product"
+                alt="ปี๊บ ปี๊บเหลี่ยม"
                 className="w-32 h-32 object-cover content-center justify-center md:w-48 md:h-48 lg:w-56 lg:h-56"
               />
             </div>
@@ -208,7 +208,7 @@ function Content() {
             <div className="">
               <img
                 src="./bucketpopup.png"
-                alt="product"
+                alt="ปี๊บ ปี๊บเหลี่ยม"
                 className="w-32 h-32 object-cover content-center justify-center md:w-48 md:h-48 lg:w-56 lg:h-56"
               />
             </div>
@@ -239,7 +239,7 @@ function Content() {
             <div className="">
               <img
                 src="./bucketgold.png"
-                alt="product"
+                alt="ปี๊บ ปี๊บเหลี่ยม"
                 className="w-32 h-32 object-cover content-center justify-center md:w-48 md:h-48 lg:w-56 lg:h-56"
               />
             </div>
