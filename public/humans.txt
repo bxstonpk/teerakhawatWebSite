@@ -1,0 +1,18 @@
+/**************************************
+ |   Information for humans           |
+ |   https://www.teerakhawatcan.com   |
+ **************************************/
+
+  TEAM
+  --------------------------------------------------------
+  Development: Prasit Krongmaroeng
+  Design: Prasit Krongmaroeng
+  Content: Prasit Krongmaroeng
+
+  THANKS
+  --------------------------------------------------------
+  Special thanks to our users, testers, and supporters.
+
+  CONTACT
+  --------------------------------------------------------
+  Email: p.krongmaaroeng@gmail.com
